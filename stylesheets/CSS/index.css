@@ -54,8 +54,14 @@ table {
 
 * {
   box-sizing: border-box;
-  border: 3px solid slategray;
   max-width: 100%;
+}
+
+body {
+  border: 3px solid slategray;
+}
+body .header-container {
+  border: 3px solid slategray;
 }
 
 /*# sourceMappingURL=index.css.map */
