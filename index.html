@@ -5,7 +5,8 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="stylesheets/CSS/index.css"/>
-        <script src="components/Background/background.js/" async></script>
+        <!-- <script src="components/Background/background.js/" async></script> -->
+        <script src="components/Skills/skills.js" async></script>
     </head>
     <body class='master-container'>
         <nav class="navigation">
@@ -16,13 +17,24 @@
         <!-- HEADER DIV -->
         <div class='header-container'>
             <!-- May not hardcode this idk why I would make a component for it -->
-            <img src="assets/images/selfieNFLme.png" alt="myPic">
+            <img src="assets/images/selfieNFLme.png" alt="my headshot">
             <h1>Lando the Developer</h1>
-            <p>NFL athlete turned Software Engineer. Traded in my playbook for a laptop and language documentation. Currently studying full stack web development'</p>
+            <p>NFL athlete turned Software Engineer. Traded in my playbook for a laptop. Currently studying full stack web development'</p>
         </div>
         <!-- MY BACKGROUND AND VISION DIV-->
-        <div class='bg-container'></div>
-        <!-- Add a card carosel of your career  and accomplishments -->
+        <div class='bg-container'>
+            <div class='bg-content'>
+                <h2 class='bg-title'>Where I'm Coming From...</h2>
+                <p class="bg-text">I spent my entire life pursuing the game of football. It took me to Chapel Hill, NC where I played 5 years while earning a double major in Sport Admin and English. It was my dream to play professionally and I got the opportunity to truly live it out. But all good things must come to an end, and I find myself looking forward to the next chapter.</p>
+                <h2 class='bg-title'>...Where I'm Going</h2>
+                <p class="bg-text">The summer before my last camp (in 2019) I discovered a new potential passion in coding and software development. As the sun set on my football career I saw opportunity rise on a new path. I plan on chasing software engineering with the same veracious passion that I chased the game of football. I look forward to putting my skills to use and contributing to this industry. I am looking forward to developing applications and web pages for my side ventures like podcasting and coaching!</p>
+                <button class=learnMore">
+                    <a href="about.html">More About Me</a>
+                </button>
+            </div>
+            <!-- add slideshow to img box below -->
+            <div class="img-slides"></div>
+        </div>
         <!-- MY SKILLS (In Development) DIV -->
         <div class="skills-container"></div>
         <!-- PROJECT SNAPSHOT DIV -->
