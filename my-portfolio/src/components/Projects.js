@@ -53,8 +53,8 @@ const Skills = () =>{
                 {/* <div className='projects zeit'> */}
                     {/* <h3>Zeit</h3> */}
                     <div className='project-links'>
-                        <a href='https://zeit.co/landonlewisturner/weeb-watch/lj5w55t3e'>Weeb Watch: Top Ranked Anime Suggestions</a>
-                        <a href='https://zeit.co/landonlewisturner/landos-git-legion/nlyv30g98'>Lando's Github Legion</a>
+                        <a href='https://weeb-watch-lj5w55t3e.now.sh/'>Weeb Watch: Top Ranked Anime Suggestions</a>
+                        <a href='https://landos-git-legion-nlyv30g98.now.sh/'>Lando's Github Legion</a>
                         <a href='https://lando-nasa-page.netlify.com/'>NASA Photo of the Day</a>
                     </div>
                 {/* </div> */}
