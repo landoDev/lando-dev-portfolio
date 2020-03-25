@@ -75,7 +75,7 @@ const Projects = () =>{
     // Calls github repos on load
     useEffect(()=>{
         getRepos();
-    },[github])
+    },[])
     const getRepos = () =>{
         axios.get(`${repos}`)
         .then(res=>{
