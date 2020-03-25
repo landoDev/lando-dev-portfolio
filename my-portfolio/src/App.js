@@ -22,6 +22,7 @@ const FooterPosition = styled.div`
 
 
 function App() {
+  console.log('Ahem... Can I help you? 🤨')
   const [github, setGithub]= useState([]);
   const [zeit, setZeit] = useState([]);
   const [netlify, setNetlify] = useState([]);
@@ -31,7 +32,7 @@ function App() {
     axios.get('https://api.github.com/users/landoDev')
     .then(res=>{
       // THIS RETURNS AN OBJECT WHICH IS OKAY FOR NOW
-      console.log(res.data)
+      // console.log(res.data)
       setGithub(res.data)
     })
     .catch(err=> console.log('SON OF A...', err))
