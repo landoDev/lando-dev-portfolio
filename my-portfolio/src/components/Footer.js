@@ -6,11 +6,16 @@ const FooterDiv = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #101820;
+    margin-top: 15%;
+    bottom: 0;
+    heigh
+    position: fixed;
+    width: 100%;
     h4, a{
         margin: 2% .2%;
         color: #FFFFFF;
-        text-shadow: 1px 1px #D3BC8D;
+        text-shadow: 1px 1px #101820;
+        font-size: 2rem
     }
 `;
 

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios'
+import styled from 'styled-components';
 
 import { HomeContext } from './contexts/HomeContext'
 
@@ -10,6 +11,14 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm';
+
+const ContentDiv = styled.div`
+  flex: 1 0 auto;
+`;
+const FooterPosition = styled.div`
+  flex-shink: 0;
+`;
 
 
 function App() {
@@ -22,6 +31,7 @@ function App() {
     axios.get('https://api.github.com/users/landoDev')
     .then(res=>{
       // THIS RETURNS AN OBJECT WHICH IS OKAY FOR NOW
+      console.log(res.data)
       setGithub(res.data)
     })
     .catch(err=> console.log('SON OF A...', err))
@@ -52,16 +62,15 @@ function App() {
           <Skills />
           <Projects />
         </Route>
-      
       {/* ABOUT PAGE */}
       <Route path='/about'>
         <AboutPage />
       </Route>
       {/* CONTACT FORM */}
       <Route path='/contact'>
-
+        <ContactForm />
       </Route>
-      <Footer />
+        <Footer />
       </HomeContext.Provider>
     </div>
   );

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { HomeContext } from '../contexts/HomeContext';
+import axios from 'axios';
 
 const ProjectsDiv = styled.div`
     display: flex;
@@ -12,6 +14,7 @@ const ProjectsDiv = styled.div`
         color: #FFFFFF;
         text-shadow: 1px 1px #D3BC8D;
         text-align: center;
+        font-size: 2rem;
     }
     .live-projects{
         display: flex;
@@ -33,17 +36,54 @@ const ProjectsDiv = styled.div`
             }
         }
     }
-    .replace-later{
-        color: #FFFFFF;
-        text-shadow: 1px 1px #D3BC8D;
-        text-align: center;
-        margin: 4% 0; 
-    }
+    .github-repos{
+        display: flex;
+        justify-content: space-around;
+        flex-flow: wrap;
+        align-items: center;
+        width: 100%;
+        .repo-div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #FFFFFF;
+            text-shadow: 1px 1px #D3BC8D;
+            text-align: center;
+            margin: 4% 0;
+            width: 30%;
+            border: 2px outset #D3BC8D;
+            background-color: #FFFFFF;
+            .repo-name{
+                color: #101820;
+                text-shadow: 1px 1px #D3BC8D;
+                text-align: center;
+            } 
+            .repo-link{
+                color: #101820;
+                margin-bottom: 5%;
+            }
+        }
+        }
     }
 `;
 
-const Skills = () =>{
-    
+const Projects = () =>{
+    const [repoData, setRepoData] = useState([])
+    const github = useContext(HomeContext)
+    const repos = `${github.repos_url}`
+
+    // Calls github repos on load
+    useEffect(()=>{
+        getRepos();
+    },[github])
+    const getRepos = () =>{
+        axios.get(`${repos}`)
+        .then(res=>{
+            console.log('repos data', res)
+            setRepoData(res.data)
+        })
+    }
+    console.log(repoData)
     return(
         // I KNOW THIS IS A MESS LOL THE GOAL IS TO HAVE TWO SECTIONS AND MAP THROUGH EXISTING PROJECTS OFF AN API CALL. MAY WANT TO GET RID OF NETLIFY IF YOU PUBLISH MORE TO ZEIT AND ADD NASA AS A BONUS LINK OR SOMETHING
         <ProjectsDiv>
@@ -67,11 +107,18 @@ const Skills = () =>{
                 {/* </div> */}
             </div>
             <h3>Public Repos</h3>
-            <div className='projects github'>
-                <p className='replace-later'>**Content Coming Soon**</p>
+            <div className='github-repos'>
+                {repoData.map(repo=>{
+                    return(
+                        <div key={repo.id} className='repo-div'>
+                            <h4 className='repo-name'>{repo.name}</h4>
+                            <a href={repo.html_url} className='repo-link'>Link</a>
+                        </div>
+                    )
+                })}
             </div>
         </ProjectsDiv>
     )
 }
 
-export default Skills
+export default Projects
