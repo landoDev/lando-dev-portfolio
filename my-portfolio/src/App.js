@@ -26,6 +26,8 @@ function App() {
   const [github, setGithub]= useState([]);
   const [zeit, setZeit] = useState([]);
   const [netlify, setNetlify] = useState([]);
+  const [repoData, setRepoData] = useState([])
+  const repos = `${github.repos_url}`
   // ****  EVENTUALLY I WILL WORK WITH ZEIT AND NETLIFY TO USE THEIR API UNTIL THEN I WILL HARDCODE LINKS IN THE PROJECT DIVS **** //
 
   useEffect(()=>{
@@ -35,9 +37,17 @@ function App() {
       // console.log(res.data)
       setGithub(res.data)
     })
+    .then(
+      axios.get('https://api.github.com/users/landoDev/repos')
+      .then(res=>{
+          setRepoData(res.data)
+      })
+      .catch(err=>{
+          console.log(err)
+      })
+    )
     .catch(err=> console.log('SON OF A...', err))
   }, [])
-
   // .then(()=> axios.get('https://api.zeit.co/www/landoDev')
   // .then(res=>{
   //   console.log('ZEIT',res.data)
@@ -61,7 +71,7 @@ function App() {
         <Route exact path='/'>
           <Header className="App-header" />
           <Skills />
-          <Projects />
+          <Projects repoData={repoData}/>
         </Route>
       {/* ABOUT PAGE */}
       <Route path='/about'>

@@ -67,22 +67,23 @@ const ProjectsDiv = styled.div`
     }
 `;
 
-const Projects = () =>{
-    const [repoData, setRepoData] = useState([])
+const Projects = props =>{
+    // const [repoData, setRepoData] = useState([])
     const github = useContext(HomeContext)
-    const repos = `${github.repos_url}`
+    // const repos = `${github.repos_url}`
     
     // Calls github repos on load
     // needs github in dependecy array
-    useEffect(()=>{
-        getRepos();
-    },[github])
-    const getRepos = () =>{
-        axios.get(`${repos}`)
-        .then(res=>{
-            setRepoData(res.data)
-        })
-    }
+    // useEffect(()=>{
+    //     axios.get(`${repos}`)
+    //     .then(res=>{
+    //         setRepoData(res.data)
+    //     })
+    //     .catch(err=>{
+    //         console.log(err)
+    //     })
+    // },[github])
+    
     return(
         // I KNOW THIS IS A MESS LOL THE GOAL IS TO HAVE TWO SECTIONS AND MAP THROUGH EXISTING PROJECTS OFF AN API CALL. MAY WANT TO GET RID OF NETLIFY IF YOU PUBLISH MORE TO ZEIT AND ADD NASA AS A BONUS LINK OR SOMETHING
         <ProjectsDiv>
@@ -107,7 +108,7 @@ const Projects = () =>{
             </div>
             <h3>Public Repos</h3>
             <div className='github-repos'>
-                {repoData.map(repo=>{
+                {props.repoData.map(repo=>{
                     return(
                         <div key={repo.id} className='repo-div'>
                             <h4 className='repo-name'>{repo.name}</h4>
