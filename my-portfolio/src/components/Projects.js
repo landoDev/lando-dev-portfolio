@@ -68,22 +68,8 @@ const ProjectsDiv = styled.div`
 `;
 
 const Projects = props =>{
-    // const [repoData, setRepoData] = useState([])
+    // Repo data has been prop drilled into this component
     const github = useContext(HomeContext)
-    // const repos = `${github.repos_url}`
-    
-    // Calls github repos on load
-    // needs github in dependecy array
-    // useEffect(()=>{
-    //     axios.get(`${repos}`)
-    //     .then(res=>{
-    //         setRepoData(res.data)
-    //     })
-    //     .catch(err=>{
-    //         console.log(err)
-    //     })
-    // },[github])
-    
     return(
         // I KNOW THIS IS A MESS LOL THE GOAL IS TO HAVE TWO SECTIONS AND MAP THROUGH EXISTING PROJECTS OFF AN API CALL. MAY WANT TO GET RID OF NETLIFY IF YOU PUBLISH MORE TO ZEIT AND ADD NASA AS A BONUS LINK OR SOMETHING
         <ProjectsDiv>
