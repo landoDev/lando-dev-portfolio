@@ -40,11 +40,12 @@ function App() {
         <Route exact path='/'>
           <Header className="App-header" />
           <Skills />
+          <AboutPage />
           <Projects projects={whitelist}/>
         </Route>
       {/* ABOUT PAGE */}
       <Route path='/about'>
-        <AboutPage />
+        
       </Route>
       {/* CONTACT FORM */}
       <Route path='/contact'>
