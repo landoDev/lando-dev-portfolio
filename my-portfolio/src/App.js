@@ -15,6 +15,7 @@ import ContactForm from './components/ContactForm';
 
 function App() {
   console.log('Ahem... Can I help you? 🤨')
+  const [darkMode, setDarkMode] = useState(false)
   const [github, setGithub]= useState([]);
   const [repoData, setRepoData] = useState([])
   const repos = `${github.repos_url}`
