@@ -15,11 +15,12 @@ import ContactForm from './components/ContactForm';
 
 function App() {
   console.log('Ahem... Can I help you? 🤨')
-  const [darkMode, setDarkMode] = useState(false)
   const [github, setGithub]= useState([]);
-  const [repoData, setRepoData] = useState([])
+  const [repoData, setRepoData] = useState([]);
+  const whitelist = []
   const repos = `${github.repos_url}`
   // MAKE A WHITELIST OF REPOS FOR PROJECTS PAGE AND MAP THROUGH THEM TO CREATE LINKS TO THEM
+  // drill whitelist into components that need them
 
   useEffect(()=>{
     axios.get('https://api.github.com/users/landoDev')
