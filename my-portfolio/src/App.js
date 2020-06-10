@@ -13,55 +13,30 @@ import AboutPage from './components/AboutPage'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm';
 
-const ContentDiv = styled.div`
-  flex: 1 0 auto;
-`;
-const FooterPosition = styled.div`
-  flex-shink: 0;
-`;
-
-
 function App() {
   console.log('Ahem... Can I help you? 🤨')
   const [github, setGithub]= useState([]);
-  const [zeit, setZeit] = useState([]);
-  const [netlify, setNetlify] = useState([]);
   const [repoData, setRepoData] = useState([])
   const repos = `${github.repos_url}`
-  // ****  EVENTUALLY I WILL WORK WITH ZEIT AND NETLIFY TO USE THEIR API UNTIL THEN I WILL HARDCODE LINKS IN THE PROJECT DIVS **** //
+  // MAKE A WHITELIST OF REPOS FOR PROJECTS PAGE AND MAP THROUGH THEM TO CREATE LINKS TO THEM
 
   useEffect(()=>{
     axios.get('https://api.github.com/users/landoDev')
     .then(res=>{
-      // THIS RETURNS AN OBJECT WHICH IS OKAY FOR NOW
-      // console.log(res.data)
       setGithub(res.data)
     })
     .then(
       axios.get('https://api.github.com/users/landoDev/repos')
       .then(res=>{
+        console.log('repo data', res.data)
           setRepoData(res.data)
       })
       .catch(err=>{
           console.log(err)
       })
-    )
-    .catch(err=> console.log('SON OF A...', err))
+    );
   }, [])
-  // .then(()=> axios.get('https://api.zeit.co/www/landoDev')
-  // .then(res=>{
-  //   console.log('ZEIT',res.data)
-  //   // DON'T FORGET TO SPREAD THE ARRAY
-  //   setZeit(...zeit, res.data)
-  // }))
-  // useEffect(()=>{
-  //   axios.get('')
-  //   .then(res=>{
-  //     console.log(res.data)
-  //     // DON'T FORGET TO SPREAD THE ARRAY
-  //     setNetlify([...netlify, res.data])
-  //   })
-  // }, [])
+
   
   return (
     <div className="App">
