@@ -18,7 +18,6 @@ function App() {
   const [github, setGithub]= useState([]);
   const [repoData, setRepoData] = useState([]);
   const whitelist = []
-  const repos = `${github.repos_url}`
   // MAKE A WHITELIST OF REPOS FOR PROJECTS PAGE AND MAP THROUGH THEM TO CREATE LINKS TO THEM
   // drill whitelist into components that need them
 
@@ -27,16 +26,9 @@ function App() {
     .then(res=>{
       setGithub(res.data)
     })
-    .then(
-      axios.get('https://api.github.com/users/landoDev/repos')
-      .then(res=>{
-        console.log('repo data', res.data)
-          setRepoData(res.data)
-      })
-      .catch(err=>{
-          console.log(err)
-      })
-    );
+    .catch(err=>{
+      console.log(err)
+    });
   }, [])
 
   
@@ -48,7 +40,7 @@ function App() {
         <Route exact path='/'>
           <Header className="App-header" />
           <Skills />
-          <Projects repoData={repoData}/>
+          <Projects projects={whitelist}/>
         </Route>
       {/* ABOUT PAGE */}
       <Route path='/about'>

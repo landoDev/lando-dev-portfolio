@@ -13,7 +13,6 @@ const FooterDiv = styled.div`
     width: 100%;
     h4, a{
         margin: 2% .2%;
-        color: #FFFFFF;
         text-shadow: 1px 1px #101820;
         font-size: 2rem
     }

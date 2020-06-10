@@ -1,17 +1,14 @@
 import React, { useContext, useState, useEffect } from 'react';
-import styled from 'styled-components';
-import { HomeContext } from '../contexts/HomeContext';
 import axios from 'axios';
+import { HomeContext } from '../contexts/HomeContext';
+import { ProjectsDiv } from '../styles/index';
 
-const ProjectsDiv = styled.div`
 
-`;
 
 const Projects = props =>{
     // Repo data has been prop drilled into this component
     const github = useContext(HomeContext)
     return(
-        // I KNOW THIS IS A MESS LOL THE GOAL IS TO HAVE TWO SECTIONS AND MAP THROUGH EXISTING PROJECTS OFF AN API CALL. MAY WANT TO GET RID OF NETLIFY IF YOU PUBLISH MORE TO ZEIT AND ADD NASA AS A BONUS LINK OR SOMETHING
         <ProjectsDiv>
             <h2>Projects</h2>
             <div className='live-projects'>

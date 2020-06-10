@@ -1,20 +1,6 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from 'react';
+import { AboutDiv } from '../styles/index';
 
-const AboutDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 2% 2%;
-    background-color: #101820;
-    border: 5px outset #D3BC8D;
-     h2, p{
-        text-align: center;
-        color: #FFFFFF;
-        text-shadow: 1px 1px #D3BC8D;
-        font-size: 1.5rem;
-    }
-`;
 
 const AboutPage = () =>{
     return(

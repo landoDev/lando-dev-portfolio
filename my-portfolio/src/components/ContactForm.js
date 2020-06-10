@@ -1,58 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import styled from 'styled-components';
+import { ContactDiv } from '../styles/index'
 
-const ContactDiv = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 50%;
-    background-color: #101820;
-    border: 5px outset #D3BC8D;
-    h2, label {
-        text-align: center;
-        color: #FFFFFF;
-        text-shadow: 1px 1px #D3BC8D;
-        font-size: 1.5rem;
-        margin-top: 2%;
-    }
-    .contact-form{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 2% 0;
-        width: 100%;
-    .input-field{
-        margin: 3% 5%;
-        width: 50%;
-        padding: 2%;
-    }
-    .reasons{
-        margin: 3% 5%;
-        width: 55%;
-        padding: 5% 0;
-    }
-    textarea{
-        margin: 3% 5%;
-        padding-left: 1%;
-        padding-top: 1%;
-        height:20vh;
-        width: 80%;
-    }
-    .submit-contact{
-        margin-bottom: 2%;
-        width: 15%;
-        borde: 1px outset #D3BC8D;
-    }
-    span{
-        color: red;
-    }
-`;
 
 const ContactForm = () => {
     const { register, handleSubmit, watch, errors } = useForm();

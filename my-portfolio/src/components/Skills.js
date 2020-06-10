@@ -1,9 +1,5 @@
-import React from 'react'
-import styled from 'styled-components';
-
-const SkillsDiv = styled.div`
-
-`;
+import React from 'react';
+import { SkillsDiv } from '../styles/index';
 
 
 const Skills = () =>{
