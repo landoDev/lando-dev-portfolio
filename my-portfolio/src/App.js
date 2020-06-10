@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios'
-import styled from 'styled-components';
+import Paper from '@material-ui/core/Paper';
 
 import { HomeContext } from './contexts/HomeContext'
 
@@ -12,10 +12,12 @@ import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm';
+import { BodyContainer } from './styles/index';
 
 function App() {
   console.log('Ahem... Can I help you? 🤨')
   const [github, setGithub]= useState([]);
+  console.log(github)
   const [repoData, setRepoData] = useState([]);
   const whitelist = []
   // MAKE A WHITELIST OF REPOS FOR PROJECTS PAGE AND MAP THROUGH THEM TO CREATE LINKS TO THEM
@@ -29,6 +31,7 @@ function App() {
     .catch(err=>{
       console.log(err)
     });
+    
   }, [])
 
   
@@ -39,9 +42,13 @@ function App() {
       <HomeContext.Provider value={github}>
         <Route exact path='/'>
           <Header className="App-header" />
-          <Skills />
-          <AboutPage />
-          <Projects projects={whitelist}/>
+          <BodyContainer>
+          <Paper elevation={3}>
+            <Skills />
+          </Paper>
+            <AboutPage />
+            <Projects />
+          </BodyContainer>     
         </Route>
       {/* ABOUT PAGE */}
       <Route path='/about'>

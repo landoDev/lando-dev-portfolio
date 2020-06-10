@@ -16,7 +16,7 @@ const Projects = props =>{
                 <div className='project-links'>
                     {projects.map(project=>{
                         return(
-                            <div>
+                            <div key={project.name}>
                                 <h2>{project.name}</h2>
                                 <p>{project.description}</p>
                                 <a href={project.link}>{project.link}</a>

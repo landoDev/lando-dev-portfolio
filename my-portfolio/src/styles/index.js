@@ -24,6 +24,19 @@ export const HeaderDiv = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
+    .icons{
+        // border: 2px solid black;
+        display: flex;
+        justify-content: space-evenly;
+        width: 25%;
+    }
+`;
+
+export const BodyContainer = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 `;
 
 export const SkillsDiv = styled.div`
