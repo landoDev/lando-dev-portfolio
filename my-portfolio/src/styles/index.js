@@ -37,6 +37,9 @@ export const BodyContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    .sub-body {
+        width: 45%;
+    }
 `;
 
 export const SkillsDiv = styled.div`

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios'
-import Paper from '@material-ui/core/Paper';
 
 import { HomeContext } from './contexts/HomeContext'
 
@@ -37,18 +36,26 @@ function App() {
   
   return (
     <div className="App">
-      <Navigation />
+      {/* <Navigation /> */}
       {/* HOME PAGE */}
       <HomeContext.Provider value={github}>
         <Route exact path='/'>
+          {/* add a mail icon to the bottom of header with route to contact page */}
+          {/* add globe icon for wikipedia */}
           <Header className="App-header" />
+          {/* Add a title cotainer */}
+          <h2>Skills</h2>
+          <h2>Background</h2>
           <BodyContainer>
-          <Paper elevation={3}>
-            <Skills />
-          </Paper>
-            <AboutPage />
-            <Projects />
-          </BodyContainer>     
+            <div className='sub-body'>
+              <Skills />
+            </div>
+            <div className='sub-body'>
+              <AboutPage />
+            </div>
+          </BodyContainer>
+            {/* use grid and cards from material UI */}
+            <Projects />   
         </Route>
       {/* ABOUT PAGE */}
       <Route path='/about'>
