@@ -33,6 +33,16 @@ export const HeaderDiv = styled.div`
     }
 `;
 
+export const TitleContainer = styled.div`
+    display: flex;
+    width: 100%;
+    .title {
+        margin-left: 4%;
+    }
+    .title.background {
+        margin-left: 45%;
+    }
+`;
 export const BodyContainer = styled.div`
     display: flex;
     justify-content: space-evenly;

@@ -4,21 +4,20 @@ import axios from 'axios'
 
 import { HomeContext } from './contexts/HomeContext'
 
-import Navigation from './components/Navigation'
+// import Navigation from './components/Navigation'
 import Header from './components/Header'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
 import Footer from './components/Footer'
 import ContactForm from './components/ContactForm';
-import { BodyContainer } from './styles/index';
+import { BodyContainer, TitleContainer } from './styles/index';
 
 function App() {
   console.log('Ahem... Can I help you? 🤨')
   const [github, setGithub]= useState([]);
-  console.log(github)
-  const [repoData, setRepoData] = useState([]);
-  const whitelist = []
+  // console.log(github);
+  const whitelist = [];
   // MAKE A WHITELIST OF REPOS FOR PROJECTS PAGE AND MAP THROUGH THEM TO CREATE LINKS TO THEM
   // drill whitelist into components that need them
 
@@ -40,12 +39,11 @@ function App() {
       {/* HOME PAGE */}
       <HomeContext.Provider value={github}>
         <Route exact path='/'>
-          {/* add a mail icon to the bottom of header with route to contact page */}
-          {/* add globe icon for wikipedia */}
           <Header className="App-header" />
-          {/* Add a title cotainer */}
-          <h2>Skills</h2>
-          <h2>Background</h2>
+          <TitleContainer>
+            <h2 className='title skills'>Skills</h2>
+            <h2 className='title background'>Background</h2>
+          </TitleContainer>
           <BodyContainer>
             <div className='sub-body'>
               <Skills />
@@ -57,11 +55,7 @@ function App() {
             {/* use grid and cards from material UI */}
             <Projects />   
         </Route>
-      {/* ABOUT PAGE */}
-      <Route path='/about'>
-        
-      </Route>
-      {/* CONTACT FORM */}
+      {/* CONTACT PAGE */}
       <Route path='/contact'>
         <ContactForm />
       </Route>
