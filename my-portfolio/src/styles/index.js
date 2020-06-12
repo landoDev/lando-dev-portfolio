@@ -57,7 +57,18 @@ export const SkillsDiv = styled.div`
 `;
 
 export const ProjectsDiv = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`;
 
+export const MappedProjects = styled.div`
+    display: flex;
+    justify-content: space-evenly;
+    .project {
+        width: 30%;
+    }
 `;
 
 export const AboutDiv = styled.div`
