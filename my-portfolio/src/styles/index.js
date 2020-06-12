@@ -71,12 +71,25 @@ export const MappedProjects = styled.div`
     }
 `;
 
+export const Project = styled.div`
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    .link {
+        width: 100%;
+        align-self: flex-end;
+        margin-top: 5%;
+    }
+`;
+
 export const ThumbnailDiv = styled.div`
     width: calc(1440px * 0.25);
     height: calc(900px * 0.25);
-    display: inline-block;
     overflow: hidden;
     position: relative;
+    pointer-events: none;
+    margin: 0 auto;
+    border 1px solid black;
     .thumbnail iframe {
         width: 1440px;
         height: 900px;
@@ -91,9 +104,8 @@ export const ThumbnailDiv = styled.div`
         -webkit-transform: scale(0.25);
         -webkit-transform-origin: 0 0;
     };
-    .thumbnail:after {
+    .thumbnail:after{
         content: "";
-        display: block;
         position: absolute;
         top: 0;
         left: 0;

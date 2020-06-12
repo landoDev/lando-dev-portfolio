@@ -1,26 +1,16 @@
 import React, { useContext } from 'react';
-import axios from 'axios';
-import html2canvas from 'html2canvas';
-import Paper from '@material-ui/core/Paper';
 import { HomeContext } from '../contexts/HomeContext';
-import { ProjectsDiv, MappedProjects, ThumbnailDiv } from '../styles/index';
+import Paper from '@material-ui/core/Paper';
+import Link from '@material-ui/core/Link';
+import { ProjectsDiv, MappedProjects, ThumbnailDiv, Project } from '../styles/index';
 import { projects } from '../ProjectList';
 
 const getPreview = link => {
     return (
         <div className='thumbnail'>
-            <iframe src={link} frameBorder='0' onLoad='opacity = 1'></iframe>
+            <iframe src={link} frameBorder='0'></iframe>
         </div>
     )
-    // axios.get(`http://api.linkpreview.net/?key=1d9f3a79b51e7d1179eb873a1d74f538&q=${link}`)
-    // .then(res =>{
-    //     console.log('link preview', res.image)
-    //     return res.image
-    // }
-    // )
-    // .catch(err =>{
-    //     console.log('getPreview', err)
-    // })
 }
 
 const Projects = props =>{
@@ -34,7 +24,7 @@ const Projects = props =>{
                         // const thumbnail = getPreview(project.link)
                         return(
                             <Paper className='project' elevation={3}>
-                                <div id={project.name}>
+                                <Project id={project.name}>
                                     <h2>{project.name}</h2>
                                     <p>{project.description}</p>
                                     <ThumbnailDiv className='thumbnail-container'>
@@ -42,8 +32,10 @@ const Projects = props =>{
                                     </ThumbnailDiv>
                                     {/* { thumbnail ? <img src={thumbnail} alt='link preview' />
                                     : <span>Preview Unavailable</span> } */}
-                                    <a href={project.link}>{project.link}</a>
-                                </div>
+                                    <Link href={project.link} className='link project'
+                                    variant="body2"
+                                    >{project.link}</Link>
+                                </Project>
                             </Paper>
                         )
                     })}
