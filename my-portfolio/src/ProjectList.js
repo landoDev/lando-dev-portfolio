@@ -15,7 +15,7 @@ export const projects = [
         name: 'Merch Dropper',
         description: 'A hassle free online merch shop. Merch Dropper is a platform to upload designs and create products for a drop-shipping online store. Perfect for small business, fundraising and content-creators',
         role: 'Full Stack Web Dev',
-        link: 'merchdropper.store'
+        link: 'https://merchdropper.store'
     }
 
 ]
