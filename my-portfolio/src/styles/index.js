@@ -25,6 +25,10 @@ export const HeaderDiv = styled.div`
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    .avatar {
+        border-radius: 50%;
+        padding: 2%;
+    }
     .icons{
         // border: 2px solid black;
         display: flex;

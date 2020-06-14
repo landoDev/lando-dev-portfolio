@@ -16,7 +16,7 @@ const Header = () =>{
         <HeaderDiv>
             {/* HANDLE IMG SRC WITH GITHUB STATE */}
             {/* I'd like to have a cartoon logo made for the src */}
-            <img src={github.avatar_url} alt="my headshot"></img>
+            <img className='avatar' src={github.avatar_url} alt="my headshot"></img>
             <div className='header-text'>
                 <h1>Lando the Developer</h1>
                 <p>{github.bio}</p>
