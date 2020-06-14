@@ -27,7 +27,7 @@ const ContactForm = () => {
     // function to alert user that this form is still under construction
     const buildAlert = e =>{
         e.preventDefault();
-        alert('Note from the dev: This form is still under construction. I apologize for any inconvenience! Follow me with the links below.')
+        alert('Note from the dev: This form is still under construction. I apologize for any inconvenience! Follow me on github at the link below, or feel free to email me at landonlewisturner@gmail.com or lturner@teamworks.com')
     }
     return(
         <ContactDiv>
