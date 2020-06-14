@@ -1,83 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios'
-import styled from 'styled-components';
 
 import { HomeContext } from './contexts/HomeContext'
 
-import Navigation from './components/Navigation'
+// import Navigation from './components/Navigation'
 import Header from './components/Header'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
-import Footer from './components/Footer'
+import { Footer } from './components/Footer'
 import ContactForm from './components/ContactForm';
-
-const ContentDiv = styled.div`
-  flex: 1 0 auto;
-`;
-const FooterPosition = styled.div`
-  flex-shink: 0;
-`;
-
+import { BodyContainer, TitleContainer } from './styles/index';
 
 function App() {
   console.log('Ahem... Can I help you? 🤨')
   const [github, setGithub]= useState([]);
-  const [zeit, setZeit] = useState([]);
-  const [netlify, setNetlify] = useState([]);
-  const [repoData, setRepoData] = useState([])
-  const repos = `${github.repos_url}`
-  // ****  EVENTUALLY I WILL WORK WITH ZEIT AND NETLIFY TO USE THEIR API UNTIL THEN I WILL HARDCODE LINKS IN THE PROJECT DIVS **** //
+  // console.log(github);
+  const whitelist = [];
+  // MAKE A WHITELIST OF REPOS FOR PROJECTS PAGE AND MAP THROUGH THEM TO CREATE LINKS TO THEM
+  // drill whitelist into components that need them
 
   useEffect(()=>{
     axios.get('https://api.github.com/users/landoDev')
     .then(res=>{
-      // THIS RETURNS AN OBJECT WHICH IS OKAY FOR NOW
-      // console.log(res.data)
       setGithub(res.data)
     })
-    .then(
-      axios.get('https://api.github.com/users/landoDev/repos')
-      .then(res=>{
-          setRepoData(res.data)
-      })
-      .catch(err=>{
-          console.log(err)
-      })
-    )
-    .catch(err=> console.log('SON OF A...', err))
+    .catch(err=>{
+      console.log(err)
+    });
+    
   }, [])
-  // .then(()=> axios.get('https://api.zeit.co/www/landoDev')
-  // .then(res=>{
-  //   console.log('ZEIT',res.data)
-  //   // DON'T FORGET TO SPREAD THE ARRAY
-  //   setZeit(...zeit, res.data)
-  // }))
-  // useEffect(()=>{
-  //   axios.get('')
-  //   .then(res=>{
-  //     console.log(res.data)
-  //     // DON'T FORGET TO SPREAD THE ARRAY
-  //     setNetlify([...netlify, res.data])
-  //   })
-  // }, [])
+
   
   return (
     <div className="App">
-      <Navigation />
+      {/* <Navigation /> */}
       {/* HOME PAGE */}
       <HomeContext.Provider value={github}>
         <Route exact path='/'>
           <Header className="App-header" />
-          <Skills />
-          <Projects repoData={repoData}/>
+          <TitleContainer>
+            <h2 className='title skills'>Skills</h2>
+            <h2 className='title background'>Background</h2>
+          </TitleContainer>
+          <BodyContainer>
+            <div className='sub-body'>
+              <Skills />
+            </div>
+            <div className='sub-body'>
+              <AboutPage />
+            </div>
+          </BodyContainer>
+            {/* use grid and cards from material UI */}
+            <Projects />   
         </Route>
-      {/* ABOUT PAGE */}
-      <Route path='/about'>
-        <AboutPage />
-      </Route>
-      {/* CONTACT FORM */}
+      {/* CONTACT PAGE */}
       <Route path='/contact'>
         <ContactForm />
       </Route>
