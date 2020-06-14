@@ -46,7 +46,7 @@ export const Footer = () => {
       <footer className={classes.footer}>
         <Container maxWidth="sm">
           <Typography variant="body1">
-            <div>Follow me on Github @<a href={github.html_url}>{github.login}</a></div>
+            <span>Follow me on Github @<a href={github.html_url}>{github.login}</a></span>
           </Typography>
           <Copyright />
         </Container>

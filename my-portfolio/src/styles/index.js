@@ -124,5 +124,16 @@ export const AboutDiv = styled.div`
 `;
 
 export const ContactDiv = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        justifu-content: left;
+        align-items: flex-start;
+        .element{
+            margin: 5% 0;
+        }
+    }
 `;
