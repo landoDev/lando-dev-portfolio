@@ -31,7 +31,7 @@ const ContactForm = () => {
     }
     return(
         <ContactDiv>
-
+            {/* Likely will need to pull the react hook form out and make your own around material ui, the hook can't reconcile the ui elements I added. I'll make my own form then make a div with the className contact-form to wrap around the elements so I can try to have makeStyles and get the form ui working with no warnings */}
             <h2>Contact Me!</h2>
             <form className='contact-form' onSubmit={handleSubmit(onSubmit)}>
                 <TextField className='input-field element' type='text' name='name' placeholder='Your Name' onChange={handleChange} ref={register({required: true})}></TextField>
