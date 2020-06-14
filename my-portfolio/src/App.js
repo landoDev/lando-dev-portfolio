@@ -9,7 +9,7 @@ import Header from './components/Header'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
-import Footer from './components/Footer'
+import { Footer } from './components/Footer'
 import ContactForm from './components/ContactForm';
 import { BodyContainer, TitleContainer } from './styles/index';
 

@@ -1,31 +1,57 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { HomeContext } from '../contexts/HomeContext'
-import styled from 'styled-components';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
 
-const FooterDiv = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15%;
-    bottom: 0;
-    heigh
-    position: fixed;
-    width: 100%;
-    h4, a{
-        margin: 2% .2%;
-        text-shadow: 1px 1px #101820;
-        font-size: 2rem
-    }
-`;
-
-const Footer = () =>{
-    const github = useContext(HomeContext)
-    return(
-        <FooterDiv>
-            <h4>Follow me on Github @</h4>
-            <a href={github.html_url}>{github.login}</a>
-        </FooterDiv>
-    )
+function Copyright() {
+    const website = window.location.origin
+  return (
+    <Typography variant="body2" color="textSecondary">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        {website}
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'.'}
+    </Typography>
+  );
 }
 
-export default Footer
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '100vh',
+  },
+  main: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
+  },
+  footer: {
+    padding: theme.spacing(3, 2),
+    marginTop: 'auto',
+    backgroundColor:
+      theme.palette.type === 'light' ? theme.palette.grey[200] : theme.palette.grey[800],
+  },
+}));
+
+export const Footer = () => {
+  const classes = useStyles();
+  const github = useContext(HomeContext);
+
+  return (
+    <div className={classes.root}>
+      <footer className={classes.footer}>
+        <Container maxWidth="sm">
+          <Typography variant="body1">
+            <div>Follow me on Github @<a href={github.html_url}>{github.login}</a></div>
+          </Typography>
+          <Copyright />
+        </Container>
+      </footer>
+    </div>
+  );
+}
+
