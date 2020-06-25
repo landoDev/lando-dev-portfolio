@@ -45,7 +45,7 @@ function App() {
             <h2 className='title background'>Background</h2>
           </TitleContainer>
           <BodyContainer>
-            <div className='sub-body'>
+            <div className='sub-body skills'>
               <SkillsMap />
               {/* <Skills /> */}
             </div>

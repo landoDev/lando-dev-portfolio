@@ -98,7 +98,14 @@ export const BodyContainer = styled.div`
 `;
 
 export const SkillsDiv = styled.div`
-
+    display: flex;
+`;
+export const Skill = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    width:100%;
 `;
 
 export const ProjectsDiv = styled.div`
