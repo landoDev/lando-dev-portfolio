@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { HomeContext } from '../contexts/HomeContext';
 
-import { primary, secondary, HeaderDiv } from '../styles/index';
+import { primary, secondary, HeaderDiv, PageTitle, PageSubTitle, TitleDiv } from '../styles/index';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
@@ -17,10 +17,10 @@ const Header = () =>{
             {/* HANDLE IMG SRC WITH GITHUB STATE */}
             {/* I'd like to have a cartoon logo made for the src */}
             <img className='avatar' src={github.avatar_url} alt="my headshot"></img>
-            <div className='header-text'>
-                <h1>Lando the Developer</h1>
-                <p>{github.bio}</p>
-            </div>
+            <TitleDiv className='header-text'>
+                <PageTitle>Lando the Developer</PageTitle>
+                <PageSubTitle>{github.bio}</PageSubTitle>
+            </TitleDiv>
             <div className='icons'>
                 <a href={github.html_url}>
                     <GitHubIcon  style={{ color: secondary}} fontSize='large' />
