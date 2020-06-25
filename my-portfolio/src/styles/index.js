@@ -25,15 +25,18 @@ export const HeaderDiv = styled.div`
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    background-color: #283441;
     .avatar {
+        margin-top: 5%;
         border-radius: 50%;
-        padding: 2%;
+        border-bottom: 2px solid #DFBDEB;
     }
     .icons{
         // border: 2px solid black;
         display: flex;
         justify-content: space-evenly;
         width: 25%;
+        color: #DFBDEB
     }
 `;
 
