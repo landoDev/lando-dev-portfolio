@@ -151,6 +151,15 @@ export const ProjectsDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .live-projects {
+        align-self: flex-start;
+    }
+`;
+
+export const ProjectsTitle = styled.h2`
+    font-size: 3rem;
+    color: ${primary};
+    border-bottom: 2px solid ${secondary};
 `;
 
 export const MappedProjects = styled.div`
@@ -168,7 +177,7 @@ export const Project = styled.div`
     margin: 0 auto;
     .link {
         width: 100%;
-        align-self: flex-end;
+        align-self: center;
         margin-top: 5%;
     }
 `;
@@ -179,7 +188,6 @@ export const ThumbnailDiv = styled.div`
     overflow: hidden;
     position: relative;
     pointer-events: none;
-    margin: 0 auto;
     border 1px solid black;
     .thumbnail iframe {
         width: 1440px;
