@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios'
-
 import { HomeContext } from './contexts/HomeContext'
 
 // import Navigation from './components/Navigation'
