@@ -12,6 +12,7 @@ import AboutPage from './components/AboutPage'
 import { Footer } from './components/Footer'
 import ContactForm from './components/ContactForm';
 import { BodyContainer, TitleContainer } from './styles/index';
+import SkillsMap from './components/SkillsMap';
 
 function App() {
   console.log('Ahem... Can I help you? 🤨')
@@ -46,7 +47,8 @@ function App() {
           </TitleContainer>
           <BodyContainer>
             <div className='sub-body'>
-              <Skills />
+              <SkillsMap />
+              {/* <Skills /> */}
             </div>
             <div className='sub-body'>
               <AboutPage />

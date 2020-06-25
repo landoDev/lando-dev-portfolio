@@ -3,7 +3,7 @@ import { HomeContext } from '../contexts/HomeContext';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import { ProjectsDiv, MappedProjects, ThumbnailDiv, Project } from '../styles/index';
-import { projects } from '../ProjectList';
+import { projects } from '../lists/ProjectList';
 
 const getPreview = link => {
     return (
