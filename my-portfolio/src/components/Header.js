@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { HomeContext } from '../contexts/HomeContext';
 
-import { HeaderDiv } from '../styles/index';
+import { primary, secondary, HeaderDiv } from '../styles/index';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import ContactMailIcon from '@material-ui/icons/ContactMail';
@@ -23,19 +23,19 @@ const Header = () =>{
             </div>
             <div className='icons'>
                 <a href={github.html_url}>
-                    <GitHubIcon  fontSize='large' />
+                    <GitHubIcon  style={{ color: secondary}} fontSize='large' />
                 </a>
                 <a href='https://www.linkedin.com/in/landon-turner-42539852/'>
-                    <LinkedInIcon fontSize='large' />
+                    <LinkedInIcon style={{color: secondary}} fontSize='large' />
                 </a>
                 <a href='https://docs.google.com/document/d/1XjFDXGjj-LrVeJPeuPqjOz7bYk3j3UmlgJVqcleOvCQ/edit?usp=sharing'>
-                    <DescriptionIcon fontSize='large' />
+                    <DescriptionIcon style={{color: secondary}} fontSize='large' />
                 </a>
                 <a href='https://en.wikipedia.org/wiki/Landon_Turner'>
-                    <LanguageIcon fontSize='large' />
+                    <LanguageIcon style={{color: secondary}} fontSize='large' />
                 </a>
                 <Link to='/contact'>
-                    <ContactMailIcon fontSize='large' />
+                    <ContactMailIcon style={{color: secondary}} fontSize='large' />
                 </Link>
             </div>
         </HeaderDiv>

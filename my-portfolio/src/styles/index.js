@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+export const primary = "#FFFFFF"
+export const secondary = "#CFBC32"
+
 export const NavDiv = styled.div`
     display: flex;
     justify-content: space-between;
@@ -25,18 +28,20 @@ export const HeaderDiv = styled.div`
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    background-color: #283441;
+    background-color: #1C1C7B;
+    .header-text{
+        color: #CFBC32;
+    }
     .avatar {
         margin-top: 5%;
         border-radius: 50%;
-        border-bottom: 2px solid #DFBDEB;
+        border-bottom: 2px solid #CFBC32;
     }
     .icons{
         // border: 2px solid black;
         display: flex;
         justify-content: space-evenly;
         width: 25%;
-        color: #DFBDEB
     }
 `;
 
@@ -45,6 +50,7 @@ export const TitleContainer = styled.div`
     width: 100%;
     .title {
         margin-left: 4%;
+        color: #CFBC32;
     }
     .title.background {
         margin-left: 45%;
