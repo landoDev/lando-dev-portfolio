@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
-export const primary = "#FFFFFF"
-export const secondary = "#CFBC32"
+export const primary = "#283441";
+export const secondary = "#DFBDEB";
+export const tertiary = "#FFFFFF";
+export const accent = "FFFFFF";
 
 export const NavDiv = styled.div`
     display: flex;
@@ -28,14 +30,14 @@ export const HeaderDiv = styled.div`
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    background-color: #1C1C7B;
+    background-color: ${primary};
     .header-text{
-        color: #CFBC32;
+        color: ${secondary};
     }
     .avatar {
         margin-top: 5%;
         border-radius: 50%;
-        border-bottom: 2px solid #CFBC32;
+        border-bottom: 2px solid ${secondary};
     }
     .icons{
         // border: 2px solid black;
