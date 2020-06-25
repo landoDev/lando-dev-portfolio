@@ -45,6 +45,7 @@ export const HeaderDiv = styled.div`
     margin: 0 auto;
     background-color: ${primary};
     .avatar {
+        height: 30vh;
         margin-top: 5%;
         border-radius: 50%;
         border-bottom: 2px solid ${primary};
@@ -57,7 +58,7 @@ export const HeaderDiv = styled.div`
         width: 25%;
         margin: 2% 0;
     }
-    border-bottom: 2px solid ${tertiary}   
+    border-bottom: 5px solid ${secondary}   
 `;
 
 export const TitleDiv = styled.div`
@@ -83,6 +84,7 @@ export const TitleContainer = styled.div`
     .title {
         margin-left: 4%;
         color: ${primary};
+        border-bottom: 2px solid ${secondary}
     }
     .title.background {
         margin-left: 45%;
@@ -105,7 +107,7 @@ export const Skill = styled.div`
     flex-direction: column;
     align-items: center;
     border: 2px solid black;
-    width:100%;
+    width: 100%;
 `;
 
 export const ProjectsDiv = styled.div`
