@@ -80,36 +80,72 @@ export const PageSubTitle = styled.p`
 // BODY STYLES
 export const TitleContainer = styled.div`
     display: flex;
+    justify-content: space-around;
     width: 100%;
     .title {
+        font-size: 3rem;
         margin-left: 4%;
         color: ${primary};
         border-bottom: 2px solid ${secondary}
     }
-    .title.background {
-        margin-left: 45%;
-    }
+    // .title.skills{
+    //     margin-left: 10%;
+    // }
+    // .title.background {
+    //     margin-left: 36%;
+    // }
 `;
 export const BodyContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    .sub-body {
+    margin-bottom: 5%;
+    .skills {
         width: 45%;
+        flex-shrink: 0
+        padding-left: 5%;
     }
-`;
+    .about {
+        width: 48%;
+        border-left: 2px solid ${primary} 
+    }
 
+`;
+// SKILL SECTION
 export const SkillsDiv = styled.div`
     display: flex;
+    flex-flow: wrap;
 `;
 export const Skill = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 2px solid black;
-    width: 100%;
+    // border-bottom: 2px solid ${primary};
+    width: 48%;
+    margin: 1% 0;
+    padding: 4%;
 `;
+export const SkillTitle = styled.h3`
+    color: ${primary};
+    font-size: 1.5rem;
+`;
+//////
 
+// ABOUT SECTION
+export const AboutContainer = styled.div`
+    padding-left: 2%;
+`;
+export const AboutDiv = styled.div`
+    padding: 2%;
+
+`;
+export const AboutText = styled.p`
+    color: ${primary};
+    font-size: 1.68rem;
+`;
+//////
+
+// PROJECTS 
 export const ProjectsDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -169,9 +205,7 @@ export const ThumbnailDiv = styled.div`
     }
 `;
 
-export const AboutDiv = styled.div`
 
-`;
 
 export const ContactDiv = styled.div`
     display: flex;

@@ -24,11 +24,6 @@ export const skills = [
         icon:["fab", "node"],
         description: ""
     },
-    // {
-    //     skill:"Redux",
-    //     icon:["fab", "redux"],
-    //     description: ""
-    // }
     {
         skill:"SQL",
         icon:["fas", "database"],
@@ -37,6 +32,11 @@ export const skills = [
     {
         skill:"Knex.js",
         icon:["fas", "dharmachakra"],
+        description: ""
+    },
+    {
+        skill:"...Always Learning",
+        icon:["fas", "brain"],
         description: ""
     },
     

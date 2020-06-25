@@ -10,7 +10,7 @@ import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
 import { Footer } from './components/Footer'
 import ContactForm from './components/ContactForm';
-import { BodyContainer, TitleContainer } from './styles/index';
+import { BodyContainer, TitleContainer, AboutContainer } from './styles/index';
 import SkillsMap from './components/SkillsMap';
 
 function App() {
@@ -49,11 +49,10 @@ function App() {
               <SkillsMap />
               {/* <Skills /> */}
             </div>
-            <div className='sub-body'>
+            <AboutContainer className='sub-body about'>
               <AboutPage />
-            </div>
+            </AboutContainer>
           </BodyContainer>
-            {/* use grid and cards from material UI */}
             <Projects />   
         </Route>
       {/* CONTACT PAGE */}
