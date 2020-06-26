@@ -139,6 +139,9 @@ export const BodyContainer = styled.div`
             width: 100%;
             margin: 5% 5% 0 5%;
         }
+        @media ${device.mobile} {
+            margin: 2%;
+        }
         width: 45%;
         flex-shrink: 0
         padding-left: 5%;
@@ -166,11 +169,17 @@ export const SkillMapContainer = styled.div`
             display: none;
         }
     }
+    @media ${device.mobile} {
+        // not using yet
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
 `;
 export const ResSkillTitle = styled.h2`
+    @media ${device.mobile} {
+        width: 30%;
+    }
     text-align: center;
     color: ${primary};
     font-size: 2rem;
@@ -181,12 +190,17 @@ export const SkillsDiv = styled.div`
     @media ${device.tablet} {
         // not needed for now
     }
+    
     display: flex;
     flex-flow: wrap;
 `;
 export const Skill = styled.div`
     @media ${device.tablet} {
         width: 25%;
+    }
+    @media ${device.mobile} {
+        width: 45%;
+        margin-left: 3%;
     }
     display: flex;
     flex-direction: column;
@@ -202,6 +216,7 @@ export const SkillTitle = styled.h3`
     }
     color: ${primary};
     font-size: 1.5rem;
+    text-align: center;
 `;
 //////
 
