@@ -52,13 +52,20 @@ export const HeaderDiv = styled.div`
     margin: 0 auto;
     background-color: ${primary};
     .avatar {
+        @media ${device.tablet} {
+            height: 30vh;
+        }
         height: 40vh;
         margin-top: 5%;
         border-radius: 50%;
         border-bottom: 2px solid ${primary};
         box-shadow: 5px 5px ${secondary}
+
     }
     .icons{
+        @media ${device.tablet}{
+            width: 100%;
+        }
         // border: 2px solid white;
         display: flex;
         justify-content: space-evenly;
@@ -74,6 +81,9 @@ export const TitleDiv = styled.div`
 `;
 
 export const PageTitle = styled.h1`
+    @media ${device.tablet} {
+        font-size: 3rem;
+    }
     font-size: 5rem;
     margin-bottom: 0;
 `;
