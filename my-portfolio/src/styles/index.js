@@ -15,6 +15,11 @@ export const vaderPalette = {
     valorGreen: "#556567"
 }
 
+// DEVICE BREAK POINTS
+const tablet = "800px"
+const mobile = "500px"
+const custom = "1335px" // handles the annoying responsiveness of skill section
+
 //NAV STYLES
 
 export const NavDiv = styled.div`
