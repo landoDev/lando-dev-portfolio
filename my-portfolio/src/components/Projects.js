@@ -55,7 +55,7 @@ const Projects = props =>{
                                     </CardMedia>
                                     <CardContent>
                                         <h2 className="project-name">{project.name}</h2>
-                                        {/* <p>{project.description}</p> */}
+                                        <p className="project-description">{project.description}</p>
                                     </CardContent>
                                     <CardActions>
                                         <Link href={project.link} className='link project'

@@ -128,7 +128,7 @@ export const BodyContainer = styled.div`
     .skills {
         @media ${device.tablet} {
             width: 100%;
-            margin: 0 5%;
+            margin: 5% 5% 0 5%;
         }
         width: 45%;
         flex-shrink: 0
@@ -241,6 +241,10 @@ export const ProjectsDiv = styled.div`
 `;
 
 export const ProjectsTitle = styled.h2`
+    @media ${device.tablet} {
+        font-size: 2rem;
+        margin-bottom: 5%;
+    }
     font-size: 3rem;
     color: ${primary};
     border-bottom: 2px solid ${secondary};
@@ -248,12 +252,23 @@ export const ProjectsTitle = styled.h2`
 `;
 
 export const MappedProjects = styled.div`
+    @media ${device.minTablet} {
+        .project-description {
+            display: none;
+        }
+    }
+    @media ${device.tablet} {
+        .thumbnail-container {
+            display: none;
+        }
+    }
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     #project {
         width: 30%;
     }
+
 `;
 
 export const Project = styled.div`
