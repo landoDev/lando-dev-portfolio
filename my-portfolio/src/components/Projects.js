@@ -42,9 +42,11 @@ const Projects = props =>{
                     {projects.map(project=>{
                         // const thumbnail = getPreview(project.link)
                         return(
-                            <Card id="project" className={classes.root}>
-                                <CardActionArea id={project.name}>
-                                    <CardMedia>
+                            <Card key={project.name} id="project" className={classes.root}>
+                                <CardActionArea>
+                                    <CardMedia onClick={()=>{
+                                        window.open(project.link)
+                                    }}>
                                         <ThumbnailDiv className='thumbnail-container'>
                                             {getPreview(project.link)}
                                         </ThumbnailDiv>
@@ -53,14 +55,14 @@ const Projects = props =>{
                                     </CardMedia>
                                     <CardContent>
                                         <h2 className="project-name">{project.name}</h2>
-                                        <p>{project.description}</p>
+                                        <p className="project-description">{project.description}</p>
                                     </CardContent>
                                     <CardActions>
-                                        <Link href={project.link} className='link project'
-                                        >
-                                            <Button>
+                                        <Button href={project.link} className='link project'
+                                        target="_blank" 
+                                        color="primary">
                                             Go 
-                                                </Button></Link>
+                                        </Button>
                                     </CardActions>
                                 </CardActionArea>
                             </Card>

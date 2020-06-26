@@ -10,7 +10,7 @@ import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
 import { Footer } from './components/Footer'
 import ContactForm from './components/ContactForm';
-import { BodyContainer, TitleContainer, AboutContainer } from './styles/index';
+import { BodyContainer, TitleContainer, AboutContainer, SkillMapContainer } from './styles/index';
 import SkillsMap from './components/SkillsMap';
 
 function App() {
@@ -45,10 +45,10 @@ function App() {
             <h2 className='title background'>Background</h2>
           </TitleContainer>
           <BodyContainer>
-            <div className='sub-body skills'>
+            <SkillMapContainer className='sub-body skills'>
               <SkillsMap />
               {/* <Skills /> */}
-            </div>
+            </SkillMapContainer>
             <AboutContainer className='sub-body about'>
               <AboutPage />
             </AboutContainer>

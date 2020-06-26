@@ -15,6 +15,16 @@ export const vaderPalette = {
     valorGreen: "#556567"
 }
 
+// DEVICE BREAK POINTS
+const device = {
+    tablet: "(max-width: 1080px)",
+    mobile: "(max-width: 500px)",
+    custom: "(max-width: 1380)", // handles the annoying responsiveness of skill section
+    minTablet: "(min-width: 1080px)",
+    minMobile: "(min-width: 500px)",
+    minCustom: "(min-width: 1380)"
+}
+
 //NAV STYLES
 
 export const NavDiv = styled.div`
@@ -45,13 +55,20 @@ export const HeaderDiv = styled.div`
     margin: 0 auto;
     background-color: ${primary};
     .avatar {
-        height: 30vh;
+        @media ${device.tablet} {
+            height: 30vh;
+        }
+        height: 40vh;
         margin-top: 5%;
         border-radius: 50%;
         border-bottom: 2px solid ${primary};
         box-shadow: 5px 5px ${secondary}
+
     }
     .icons{
+        @media ${device.tablet}{
+            width: 100%;
+        }
         // border: 2px solid white;
         display: flex;
         justify-content: space-evenly;
@@ -67,11 +84,22 @@ export const TitleDiv = styled.div`
 `;
 
 export const PageTitle = styled.h1`
+    @media ${device.tablet} {
+        font-size: 3rem;
+    }
+    @media ${device.mobile} {
+        font-size: 2rem;
+        border-bottom: 2px solid ${secondary};
+        margin-bottom: 5%;
+    }
     font-size: 5rem;
     margin-bottom: 0;
 `;
 
 export const PageSubTitle = styled.p`
+    @media ${device.mobile} {
+        display: none;
+    }
     font-size: 1.5rem;
 `;
 ///////
@@ -79,6 +107,9 @@ export const PageSubTitle = styled.p`
 
 // BODY STYLES
 export const TitleContainer = styled.div`
+    @media ${device.tablet} {
+        display: none
+    }
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -96,27 +127,81 @@ export const TitleContainer = styled.div`
     // }
 `;
 export const BodyContainer = styled.div`
+    @media ${device.tablet} {
+        flex-direction: column;
+    }
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 5%;
     .skills {
+        @media ${device.tablet} {
+            width: 100%;
+            margin: 5% 5% 0 5%;
+        }
+        @media ${device.mobile} {
+            margin: 2%;
+        }
         width: 45%;
         flex-shrink: 0
         padding-left: 5%;
+        // .responsive-title{
+
+        // }
     }
     .about {
+        @media ${device.tablet} {
+            width: 100%;
+            border: none;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 48%;
         border-left: 2px solid ${primary} 
     }
 
 `;
 // SKILL SECTION
+export const SkillMapContainer = styled.div`
+    @media ${device.minTablet} {
+        .responsive-title {
+            display: none;
+        }
+    }
+    @media ${device.mobile} {
+        // not using yet
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+export const ResSkillTitle = styled.h2`
+    @media ${device.mobile} {
+        width: 30%;
+    }
+    text-align: center;
+    color: ${primary};
+    font-size: 2rem;
+    border-bottom: 2px solid ${secondary};
+    width: 10%;
+`;
 export const SkillsDiv = styled.div`
+    @media ${device.tablet} {
+        // not needed for now
+    }
+    
     display: flex;
     flex-flow: wrap;
 `;
 export const Skill = styled.div`
+    @media ${device.tablet} {
+        width: 25%;
+    }
+    @media ${device.mobile} {
+        width: 45%;
+        margin-left: 3%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,20 +211,45 @@ export const Skill = styled.div`
     padding: 4%;
 `;
 export const SkillTitle = styled.h3`
+    @media ${device.tablet} {
+        font-size: 1.2rem;
+    }
     color: ${primary};
     font-size: 1.5rem;
+    text-align: center;
 `;
 //////
 
 // ABOUT SECTION
 export const AboutContainer = styled.div`
+    @media ${device.minTablet} {
+        .responsive-title {
+            display: none;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 2%;
+`;
+export const ResAboutTitle = styled.h2`
+    @media ${device.mobile} {
+        width: 50%;
+    }
+    text-align: center;
+    color: ${primary};
+    font-size: 2rem;
+    border-bottom: 2px solid ${secondary};
+    width: 25%;
 `;
 export const AboutDiv = styled.div`
     padding: 2%;
 
 `;
 export const AboutText = styled.p`
+    @media ${device.tablet} {
+        font-size: 1.2rem;
+    }
     color: ${primary};
     font-size: 1.68rem;
 `;
@@ -155,22 +265,50 @@ export const ProjectsDiv = styled.div`
     .live-projects {
         align-self: flex-start;
     }
-    .project-links
 `;
 
 export const ProjectsTitle = styled.h2`
+    @media ${device.tablet} {
+        font-size: 2rem;
+        margin-bottom: 5%;
+    }
     font-size: 3rem;
     color: ${primary};
     border-bottom: 2px solid ${secondary};
+    margin-bottom: 2.5%;
 `;
 
 export const MappedProjects = styled.div`
+    @media ${device.minTablet} {
+        .project-description {
+            display: none;
+        }
+    }
+    @media ${device.tablet} {
+        .thumbnail-container {
+            display: none;
+        }
+    }
+    @media ${device.mobile} {
+        flex-direction: column;
+    }
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    #project {
+    // THIS IS THE ID FOR THE PROJECT CARD
+    #project { 
+        @media ${device.mobile} {
+            width: 100%;
+            margin: 4%;
+  
+        }
         width: 30%;
+        .link {
+            text-decoration: none;
+        }
     }
+
+
 `;
 
 export const Project = styled.div`
@@ -182,6 +320,7 @@ export const Project = styled.div`
         width: 100%;
         align-self: center;
         margin-top: 5%;
+        
     }
 `;
 
