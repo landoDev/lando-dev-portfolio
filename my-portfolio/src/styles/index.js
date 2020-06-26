@@ -299,7 +299,7 @@ export const MappedProjects = styled.div`
     #project { 
         @media ${device.mobile} {
             width: 100%;
-            margin: 4%;
+            margin: 0 auto;
   
         }
         width: 30%;
