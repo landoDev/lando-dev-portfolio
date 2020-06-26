@@ -37,12 +37,12 @@ const Projects = props =>{
     return(
         <ProjectsDiv>
             <ProjectsTitle>Projects</ProjectsTitle>
-            <div className='live-projects'>
+            
                 <MappedProjects className='project-links'>
                     {projects.map(project=>{
                         // const thumbnail = getPreview(project.link)
                         return(
-                            <Card className={classes.root}>
+                            <Card id="project" className={classes.root}>
                                 <CardActionArea id={project.name}>
                                     <CardMedia>
                                         <ThumbnailDiv className='thumbnail-container'>
@@ -67,7 +67,6 @@ const Projects = props =>{
                         )
                     })}
                 </MappedProjects>
-            </div>
         </ProjectsDiv>
     )
 }

@@ -151,9 +151,11 @@ export const ProjectsDiv = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     .live-projects {
         align-self: flex-start;
     }
+    .project-links
 `;
 
 export const ProjectsTitle = styled.h2`
@@ -165,7 +167,8 @@ export const ProjectsTitle = styled.h2`
 export const MappedProjects = styled.div`
     display: flex;
     justify-content: space-evenly;
-    .project {
+    width: 100%;
+    #project {
         width: 30%;
     }
 `;
