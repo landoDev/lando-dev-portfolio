@@ -233,6 +233,9 @@ export const AboutContainer = styled.div`
     padding-left: 2%;
 `;
 export const ResAboutTitle = styled.h2`
+    @media ${device.mobile} {
+        width: 50%;
+    }
     text-align: center;
     color: ${primary};
     font-size: 2rem;
