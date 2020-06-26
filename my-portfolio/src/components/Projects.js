@@ -42,8 +42,8 @@ const Projects = props =>{
                     {projects.map(project=>{
                         // const thumbnail = getPreview(project.link)
                         return(
-                            <Card id="project" className={classes.root}>
-                                <CardActionArea id={project.name}>
+                            <Card key={project.name} id="project" className={classes.root}>
+                                <CardActionArea>
                                     <CardMedia onClick={()=>{
                                         window.open(project.link)
                                     }}>
@@ -58,13 +58,11 @@ const Projects = props =>{
                                         <p className="project-description">{project.description}</p>
                                     </CardContent>
                                     <CardActions>
-                                        <Link href={project.link} className='link project'
-                                        target="_blank"
-                                        >
-                                            <Button color="primary">
+                                        <Button href={project.link} className='link project'
+                                        target="_blank" 
+                                        color="primary">
                                             Go 
-                                            </Button>
-                                        </Link>
+                                        </Button>
                                     </CardActions>
                                 </CardActionArea>
                             </Card>

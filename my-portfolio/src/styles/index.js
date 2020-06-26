@@ -303,7 +303,11 @@ export const MappedProjects = styled.div`
   
         }
         width: 30%;
+        .link {
+            text-decoration: none;
+        }
     }
+
 
 `;
 
@@ -316,6 +320,7 @@ export const Project = styled.div`
         width: 100%;
         align-self: center;
         margin-top: 5%;
+        
     }
 `;
 

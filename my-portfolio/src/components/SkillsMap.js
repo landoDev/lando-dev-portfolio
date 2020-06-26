@@ -10,7 +10,7 @@ const SkillsMap = () => {
         <SkillsDiv className="skill-map">
             {skills.map(skill=>{
                 return(
-                    <Skill>
+                    <Skill key={skill.icon[1]}>
                         <FontAwesomeIcon 
                         icon={skill.icon} 
                         size="5x"
