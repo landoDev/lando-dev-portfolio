@@ -87,11 +87,19 @@ export const PageTitle = styled.h1`
     @media ${device.tablet} {
         font-size: 3rem;
     }
+    @media ${device.mobile} {
+        font-size: 2rem;
+        border-bottom: 2px solid ${secondary};
+        margin-bottom: 5%;
+    }
     font-size: 5rem;
     margin-bottom: 0;
 `;
 
 export const PageSubTitle = styled.p`
+    @media ${device.mobile} {
+        display: none;
+    }
     font-size: 1.5rem;
 `;
 ///////
