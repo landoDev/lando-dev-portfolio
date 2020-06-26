@@ -289,10 +289,19 @@ export const MappedProjects = styled.div`
             display: none;
         }
     }
+    @media ${device.mobile} {
+        flex-direction: column;
+    }
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    #project {
+    // THIS IS THE ID FOR THE PROJECT CARD
+    #project { 
+        @media ${device.mobile} {
+            width: 100%;
+            margin: 4%;
+  
+        }
         width: 30%;
     }
 
