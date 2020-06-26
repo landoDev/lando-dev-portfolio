@@ -19,7 +19,9 @@ export const vaderPalette = {
 const device = {
     tablet: "(max-width: 800px)",
     mobile: "(max-width: 500px)",
-    custom: "(max-width: 1335)" // handles the annoying responsiveness of skill section
+    custom: "(max-width: 1335)", // handles the annoying responsiveness of skill section
+    minTablet: "(min-width: 800px)",
+    minMobile: "(min-width: 500px)"
 }
 
 //NAV STYLES
@@ -118,18 +120,22 @@ export const TitleContainer = styled.div`
 export const BodyContainer = styled.div`
     @media ${device.tablet} {
         flex-direction: column;
-        .skills {
-            width: 100%;
-        }
     }
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 5%;
     .skills {
+        @media ${device.tablet} {
+            width: 100%;
+            margin: 0 5%;
+        }
         width: 45%;
         flex-shrink: 0
         padding-left: 5%;
+        // .responsive-title{
+
+        // }
     }
     .about {
         width: 48%;
@@ -138,15 +144,28 @@ export const BodyContainer = styled.div`
 
 `;
 // SKILL SECTION
+export const SkillMapContainer = styled.div`
+    @media ${device.minTablet} {
+        .responsive-title {
+            display: none;
+        }
+    }
+`;
 export const ResSkillTitle = styled.h2`
     color: ${primary};
     font-size: 1.5rem;
 `;
 export const SkillsDiv = styled.div`
+    @media ${device.tablet} {
+        
+    }
     display: flex;
     flex-flow: wrap;
 `;
 export const Skill = styled.div`
+    @media ${device.tablet} {
+        width: 25%;
+    }
     display: flex;
     flex-direction: column;
     align-items: center;
