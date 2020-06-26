@@ -138,6 +138,13 @@ export const BodyContainer = styled.div`
         // }
     }
     .about {
+        @media ${device.tablet} {
+            width: 100%;
+            border: none;
+        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         width: 48%;
         border-left: 2px solid ${primary} 
     }
@@ -163,7 +170,7 @@ export const ResSkillTitle = styled.h2`
 `;
 export const SkillsDiv = styled.div`
     @media ${device.tablet} {
-        
+        // not needed for now
     }
     display: flex;
     flex-flow: wrap;
@@ -181,6 +188,9 @@ export const Skill = styled.div`
     padding: 4%;
 `;
 export const SkillTitle = styled.h3`
+    @media ${device.tablet} {
+        font-size: 1.2rem;
+    }
     color: ${primary};
     font-size: 1.5rem;
 `;
@@ -188,13 +198,31 @@ export const SkillTitle = styled.h3`
 
 // ABOUT SECTION
 export const AboutContainer = styled.div`
+    @media ${device.minTablet} {
+        .responsive-title {
+            display: none;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding-left: 2%;
+`;
+export const ResAboutTitle = styled.h2`
+    text-align: center;
+    color: ${primary};
+    font-size: 2rem;
+    border-bottom: 2px solid ${secondary};
+    width: 25%;
 `;
 export const AboutDiv = styled.div`
     padding: 2%;
 
 `;
 export const AboutText = styled.p`
+    @media ${device.tablet} {
+        font-size: 1.2rem;
+    }
     color: ${primary};
     font-size: 1.68rem;
 `;

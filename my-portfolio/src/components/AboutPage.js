@@ -1,11 +1,11 @@
 import React from 'react';
-import { AboutDiv, AboutText } from '../styles/index';
+import { AboutDiv, AboutText, ResAboutTitle } from '../styles/index';
 
 
 const AboutPage = () =>{
     return(
         <>
-        <h2 className='responsive-title'>Background</h2>
+        <ResAboutTitle className='responsive-title'>Background</ResAboutTitle>
         <AboutDiv>
             {/* <h2>My past life... Lando the football player</h2> */}
             <AboutText><strong>I</strong> was born across the street (or rather, across the parking lot) from Milan Puskar Stadium in Morgantown, WV. Don't worry, I will not go year by year of my life story. I simply mean to set the framework that I was born for football.
