@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import axios from 'axios'
-
 import { HomeContext } from './contexts/HomeContext'
 
 // import Navigation from './components/Navigation'
@@ -11,7 +10,8 @@ import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
 import { Footer } from './components/Footer'
 import ContactForm from './components/ContactForm';
-import { BodyContainer, TitleContainer } from './styles/index';
+import { BodyContainer, TitleContainer, AboutContainer } from './styles/index';
+import SkillsMap from './components/SkillsMap';
 
 function App() {
   console.log('Ahem... Can I help you? 🤨')
@@ -45,14 +45,14 @@ function App() {
             <h2 className='title background'>Background</h2>
           </TitleContainer>
           <BodyContainer>
-            <div className='sub-body'>
-              <Skills />
+            <div className='sub-body skills'>
+              <SkillsMap />
+              {/* <Skills /> */}
             </div>
-            <div className='sub-body'>
+            <AboutContainer className='sub-body about'>
               <AboutPage />
-            </div>
+            </AboutContainer>
           </BodyContainer>
-            {/* use grid and cards from material UI */}
             <Projects />   
         </Route>
       {/* CONTACT PAGE */}

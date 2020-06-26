@@ -1,5 +1,22 @@
 import styled from 'styled-components';
 
+// COLOR PALETTES
+export const primary = "#283441";
+export const secondary = "#51D0E1";
+export const tertiary = "#FFFFFF";
+export const accent = "#000000";
+
+export const vaderPalette = {
+    durasteelGrey: "#64696C",
+    unityWhite: "FFFFFF",
+    galaxyBlack: "000000",
+    coruscantBlue: "394A59",
+    imperialRed: "#BC1E22",
+    valorGreen: "#556567"
+}
+
+//NAV STYLES
+
 export const NavDiv = styled.div`
     display: flex;
     justify-content: space-between;
@@ -18,6 +35,7 @@ const IconDiv = styled.div`
     align-items: center;
 `;
 
+// HEADER STYLES
 export const HeaderDiv = styled.div`
     display: flex;
     flex-direction: column;
@@ -25,52 +43,132 @@ export const HeaderDiv = styled.div`
     align-items: center;
     text-align: center;
     margin: 0 auto;
+    background-color: ${primary};
     .avatar {
+        height: 30vh;
+        margin-top: 5%;
         border-radius: 50%;
-        padding: 2%;
+        border-bottom: 2px solid ${primary};
+        box-shadow: 5px 5px ${secondary}
     }
     .icons{
-        // border: 2px solid black;
+        // border: 2px solid white;
         display: flex;
         justify-content: space-evenly;
         width: 25%;
+        margin: 2% 0;
     }
+    border-bottom: 5px solid ${secondary}   
 `;
 
+export const TitleDiv = styled.div`
+    color: ${secondary};
+    text-shadow: 1px 1px ${accent}
+`;
+
+export const PageTitle = styled.h1`
+    font-size: 5rem;
+    margin-bottom: 0;
+`;
+
+export const PageSubTitle = styled.p`
+    font-size: 1.5rem;
+`;
+///////
+
+
+// BODY STYLES
 export const TitleContainer = styled.div`
     display: flex;
+    justify-content: space-around;
     width: 100%;
     .title {
+        font-size: 3rem;
         margin-left: 4%;
+        color: ${primary};
+        border-bottom: 2px solid ${secondary}
     }
-    .title.background {
-        margin-left: 45%;
-    }
+    // .title.skills{
+    //     margin-left: 10%;
+    // }
+    // .title.background {
+    //     margin-left: 36%;
+    // }
 `;
 export const BodyContainer = styled.div`
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    .sub-body {
+    margin-bottom: 5%;
+    .skills {
         width: 45%;
+        flex-shrink: 0
+        padding-left: 5%;
     }
-`;
+    .about {
+        width: 48%;
+        border-left: 2px solid ${primary} 
+    }
 
+`;
+// SKILL SECTION
 export const SkillsDiv = styled.div`
+    display: flex;
+    flex-flow: wrap;
+`;
+export const Skill = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // border-bottom: 2px solid ${primary};
+    width: 48%;
+    margin: 1% 0;
+    padding: 4%;
+`;
+export const SkillTitle = styled.h3`
+    color: ${primary};
+    font-size: 1.5rem;
+`;
+//////
+
+// ABOUT SECTION
+export const AboutContainer = styled.div`
+    padding-left: 2%;
+`;
+export const AboutDiv = styled.div`
+    padding: 2%;
 
 `;
+export const AboutText = styled.p`
+    color: ${primary};
+    font-size: 1.68rem;
+`;
+//////
 
+// PROJECTS 
 export const ProjectsDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    .live-projects {
+        align-self: flex-start;
+    }
+    .project-links
+`;
+
+export const ProjectsTitle = styled.h2`
+    font-size: 3rem;
+    color: ${primary};
+    border-bottom: 2px solid ${secondary};
 `;
 
 export const MappedProjects = styled.div`
     display: flex;
     justify-content: space-evenly;
-    .project {
+    width: 100%;
+    #project {
         width: 30%;
     }
 `;
@@ -82,7 +180,7 @@ export const Project = styled.div`
     margin: 0 auto;
     .link {
         width: 100%;
-        align-self: flex-end;
+        align-self: center;
         margin-top: 5%;
     }
 `;
@@ -93,7 +191,6 @@ export const ThumbnailDiv = styled.div`
     overflow: hidden;
     position: relative;
     pointer-events: none;
-    margin: 0 auto;
     border 1px solid black;
     .thumbnail iframe {
         width: 1440px;
@@ -119,9 +216,7 @@ export const ThumbnailDiv = styled.div`
     }
 `;
 
-export const AboutDiv = styled.div`
 
-`;
 
 export const ContactDiv = styled.div`
     display: flex;
