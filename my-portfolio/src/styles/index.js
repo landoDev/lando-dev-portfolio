@@ -150,10 +150,16 @@ export const SkillMapContainer = styled.div`
             display: none;
         }
     }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 export const ResSkillTitle = styled.h2`
+    text-align: center;
     color: ${primary};
-    font-size: 1.5rem;
+    font-size: 2rem;
+    border-bottom: 2px solid ${secondary};
+    width: 10%;
 `;
 export const SkillsDiv = styled.div`
     @media ${device.tablet} {

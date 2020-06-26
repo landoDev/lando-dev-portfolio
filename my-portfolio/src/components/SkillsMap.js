@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { primary, secondary, SkillsDiv, Skill, SkillTitle } from '../styles/index';
+import { primary, secondary, SkillsDiv, Skill, SkillTitle, ResSkillTitle } from '../styles/index';
 import { skills } from '../lists/SkillsList'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const SkillsMap = () => {
     return(
         <>
-        <h2 className='responsive-title'>Skills</h2>
+        <ResSkillTitle className='responsive-title'>Skills</ResSkillTitle>
         <SkillsDiv className="skill-map">
             {skills.map(skill=>{
                 return(
