@@ -16,9 +16,11 @@ export const vaderPalette = {
 }
 
 // DEVICE BREAK POINTS
-const tablet = "800px"
-const mobile = "500px"
-const custom = "1335px" // handles the annoying responsiveness of skill section
+const device = {
+    tablet: "(max-width: 800px)",
+    mobile: "(max-width: 500px)",
+    custom: "(max-width: 1335)" // handles the annoying responsiveness of skill section
+}
 
 //NAV STYLES
 
