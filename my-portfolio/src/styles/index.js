@@ -45,7 +45,7 @@ export const HeaderDiv = styled.div`
     margin: 0 auto;
     background-color: ${primary};
     .avatar {
-        height: 30vh;
+        height: 40vh;
         margin-top: 5%;
         border-radius: 50%;
         border-bottom: 2px solid ${primary};
@@ -155,13 +155,13 @@ export const ProjectsDiv = styled.div`
     .live-projects {
         align-self: flex-start;
     }
-    .project-links
 `;
 
 export const ProjectsTitle = styled.h2`
     font-size: 3rem;
     color: ${primary};
     border-bottom: 2px solid ${secondary};
+    margin-bottom: 2.5%;
 `;
 
 export const MappedProjects = styled.div`

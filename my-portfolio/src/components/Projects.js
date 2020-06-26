@@ -44,7 +44,9 @@ const Projects = props =>{
                         return(
                             <Card id="project" className={classes.root}>
                                 <CardActionArea id={project.name}>
-                                    <CardMedia>
+                                    <CardMedia onClick={()=>{
+                                        window.open(project.link)
+                                    }}>
                                         <ThumbnailDiv className='thumbnail-container'>
                                             {getPreview(project.link)}
                                         </ThumbnailDiv>
@@ -53,14 +55,16 @@ const Projects = props =>{
                                     </CardMedia>
                                     <CardContent>
                                         <h2 className="project-name">{project.name}</h2>
-                                        <p>{project.description}</p>
+                                        {/* <p>{project.description}</p> */}
                                     </CardContent>
                                     <CardActions>
                                         <Link href={project.link} className='link project'
+                                        target="_blank"
                                         >
-                                            <Button>
+                                            <Button color="primary">
                                             Go 
-                                                </Button></Link>
+                                            </Button>
+                                        </Link>
                                     </CardActions>
                                 </CardActionArea>
                             </Card>
