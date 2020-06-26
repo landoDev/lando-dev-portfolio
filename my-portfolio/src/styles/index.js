@@ -96,6 +96,9 @@ export const PageSubTitle = styled.p`
 
 // BODY STYLES
 export const TitleContainer = styled.div`
+    @media ${device.tablet} {
+        display: none
+    }
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -113,6 +116,12 @@ export const TitleContainer = styled.div`
     // }
 `;
 export const BodyContainer = styled.div`
+    @media ${device.tablet} {
+        flex-direction: column;
+        .skills {
+            width: 100%;
+        }
+    }
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -129,6 +138,10 @@ export const BodyContainer = styled.div`
 
 `;
 // SKILL SECTION
+export const ResSkillTitle = styled.h2`
+    color: ${primary};
+    font-size: 1.5rem;
+`;
 export const SkillsDiv = styled.div`
     display: flex;
     flex-flow: wrap;

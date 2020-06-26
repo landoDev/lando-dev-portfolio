@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const SkillsMap = () => {
     return(
+        <>
+        <h2 className='responsive-title'>Skills</h2>
         <SkillsDiv className="skill-map">
             {skills.map(skill=>{
                 return(
@@ -21,6 +23,7 @@ const SkillsMap = () => {
                 )
             })}
         </SkillsDiv>
+        </>
     )
 }
 

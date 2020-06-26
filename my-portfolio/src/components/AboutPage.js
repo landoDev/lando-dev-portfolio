@@ -4,6 +4,8 @@ import { AboutDiv, AboutText } from '../styles/index';
 
 const AboutPage = () =>{
     return(
+        <>
+        <h2 className='responsive-title'>Background</h2>
         <AboutDiv>
             {/* <h2>My past life... Lando the football player</h2> */}
             <AboutText><strong>I</strong> was born across the street (or rather, across the parking lot) from Milan Puskar Stadium in Morgantown, WV. Don't worry, I will not go year by year of my life story. I simply mean to set the framework that I was born for football.
@@ -18,6 +20,7 @@ const AboutPage = () =>{
             That future is in software development! I spent a year while my football career was on it's last legs and discovered a new passion in programming! Now I pour that passion into an IDE. With my life not all consumed by the machine of competition in professional athletics I have been able to pursue new ventures and hobbies. Perhaps too many as I my wife likes to point out.
             </AboutText>
         </AboutDiv>
+        </>
     )
 }
 
