@@ -17,11 +17,12 @@ export const vaderPalette = {
 
 // DEVICE BREAK POINTS
 const device = {
-    tablet: "(max-width: 800px)",
+    tablet: "(max-width: 1080px)",
     mobile: "(max-width: 500px)",
-    custom: "(max-width: 1335)", // handles the annoying responsiveness of skill section
-    minTablet: "(min-width: 800px)",
-    minMobile: "(min-width: 500px)"
+    custom: "(max-width: 1380)", // handles the annoying responsiveness of skill section
+    minTablet: "(min-width: 1080px)",
+    minMobile: "(min-width: 500px)",
+    minCustom: "(min-width: 1380)"
 }
 
 //NAV STYLES
