@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { primary, secondary, SkillsDiv, Skill, SkillTitle, ResSkillTitle } from '../styles/index';
 import { skills } from '../lists/SkillsList'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Button from '@material-ui/core/Button';
+import { Link } from '@material-ui/core';
 
 const SkillsMap = () => {
     return(
@@ -18,7 +20,15 @@ const SkillsMap = () => {
                          />
                         <SkillTitle>{skill.skill}</SkillTitle>
                         {/* I'd like to add a dropdown that a visitor can click to read the description */}
-                        <p>{skill.description}</p>
+                        {/* certification should take you to the certifications component when I have more than one official one per skill */}
+                        {skill.certification ?
+                            <Button color={secondary} href={skill.certification}>
+                                Certification
+                            </Button>
+                            : 
+                            null
+                        }
+                        <p>{skill.description}</p> {/*see more instead, link to skills?*/}
                     </Skill>
                 )
             })}

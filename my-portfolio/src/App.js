@@ -5,7 +5,6 @@ import { HomeContext } from './contexts/HomeContext'
 
 // import Navigation from './components/Navigation'
 import Header from './components/Header'
-import Skills from './components/Skills'
 import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
 import { Footer } from './components/Footer'
