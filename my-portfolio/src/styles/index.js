@@ -30,10 +30,11 @@ const device = {
 export const NavDiv = styled.div`
     display: flex;
     justify-content: space-between;
+    width: 50%;
     .link{
         margin: 1% 5%;
         text-decoration: none;
-        // color: #FFFFFF;
+        color: #FFFFFF;
         // text-shadow: 1px 1px #D3BC8D;
     }
 `;

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { HomeContext } from '../contexts/HomeContext';
-
+import Navigation from './Navigation';
 import { primary, secondary, HeaderDiv, PageTitle, PageSubTitle, TitleDiv } from '../styles/index';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
@@ -14,6 +14,7 @@ const Header = () =>{
     const github = useContext(HomeContext)
     return(
         <HeaderDiv>
+            <Navigation />
             {/* HANDLE IMG SRC WITH GITHUB STATE */}
             {/* I'd like to have a cartoon logo made for the src */}
             <img className='avatar' src={github.avatar_url} alt="my headshot"></img>

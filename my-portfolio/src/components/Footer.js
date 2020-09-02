@@ -6,7 +6,7 @@ import Container from '@material-ui/core/Container';
 import Link from '@material-ui/core/Link';
 
 function Copyright() {
-    const website = window.location.origin
+  const website = window.location.origin
   return (
     <Typography variant="body2" color="textSecondary">
       {'Copyright © '}

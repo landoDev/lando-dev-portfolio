@@ -12,7 +12,9 @@ const Navigation = props => {
     }
 	return (
 		<NavDiv className="navigation">
-			<NavLink to="/" className='link'>Home</NavLink>
+			<a href="#skills-title" className='link'>Skills</a>
+            <a href="#background-title" className='link'>Background</a>
+            <a href="#my-projects" className='link'>Projects</a>
             
             {/* <IconDiv className='dark-mode' onClick={toggle}>
                 {darkMode ?

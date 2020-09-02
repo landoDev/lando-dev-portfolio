@@ -3,7 +3,6 @@ import { Route } from 'react-router-dom';
 import axios from 'axios'
 import { HomeContext } from './contexts/HomeContext'
 
-// import Navigation from './components/Navigation'
 import Header from './components/Header'
 import Projects from './components/Projects'
 import AboutPage from './components/AboutPage'
@@ -34,14 +33,13 @@ function App() {
   
   return (
     <div className="App">
-      {/* <Navigation /> */}
       {/* HOME PAGE */}
       <HomeContext.Provider value={github}>
         <Route exact path='/'>
           <Header className="App-header" />
           <TitleContainer>
-            <h2 className='title skills'>Skills</h2>
-            <h2 className='title background'>Background</h2>
+            <h2 id="skills-title" className='title skills'>Skills</h2>
+            <h2 id="background-title" className='title background'>Background</h2>
           </TitleContainer>
           <BodyContainer>
             <SkillMapContainer className='sub-body skills'>
@@ -49,10 +47,10 @@ function App() {
               {/* <Skills /> */}
             </SkillMapContainer>
             <AboutContainer className='sub-body about'>
-              <AboutPage />
+              <AboutPage id="about-me" />
             </AboutContainer>
           </BodyContainer>
-            <Projects />   
+            <Projects id="my-projects" />   
         </Route>
       {/* CONTACT PAGE */}
       <Route path='/contact'>

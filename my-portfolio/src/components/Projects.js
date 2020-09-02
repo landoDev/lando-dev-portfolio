@@ -36,7 +36,7 @@ const Projects = props =>{
     const classes = useStyles();
     return(
         <ProjectsDiv>
-            <ProjectsTitle>Projects</ProjectsTitle>
+            <ProjectsTitle id="my-projects">Projects</ProjectsTitle>
             
                 <MappedProjects className='project-links'>
                     {projects.map(project=>{
