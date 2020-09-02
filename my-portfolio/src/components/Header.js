@@ -23,19 +23,19 @@ const Header = () =>{
                 <PageSubTitle>{github.bio}</PageSubTitle>
             </TitleDiv>
             <div className='icons'>
-                <a href={github.html_url}>
+                <a href={github.html_url} target="_blank">
                     <GitHubIcon  style={{ color: secondary}} fontSize='large' />
                 </a>
-                <a href='https://www.linkedin.com/in/landon-turner-42539852/'>
+                <a href='https://www.linkedin.com/in/landon-turner-42539852/' target="_blank">
                     <LinkedInIcon style={{color: secondary}} fontSize='large' />
                 </a>
-                <a href='https://docs.google.com/document/d/1XjFDXGjj-LrVeJPeuPqjOz7bYk3j3UmlgJVqcleOvCQ/edit?usp=sharing'>
+                <a href='https://drive.google.com/file/d/1GS0M1D2B0_2Ziem8_ZF1lerNVmrJkQEc/view?usp=sharing' target="_blank">
                     <DescriptionIcon style={{color: secondary}} fontSize='large' />
                 </a>
-                <a href='https://en.wikipedia.org/wiki/Landon_Turner'>
+                <a href='https://en.wikipedia.org/wiki/Landon_Turner' target="_blank">
                     <LanguageIcon style={{color: secondary}} fontSize='large' />
                 </a>
-                <a href="mailto:landonlewisturner@gmail.com">
+                <a href="mailto:landonlewisturner@gmail.com" target="_blank">
                     <ContactMailIcon style={{color: secondary}} fontSize='large' />
                 </a>
             </div>
