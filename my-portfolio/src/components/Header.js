@@ -35,9 +35,9 @@ const Header = () =>{
                 <a href='https://en.wikipedia.org/wiki/Landon_Turner'>
                     <LanguageIcon style={{color: secondary}} fontSize='large' />
                 </a>
-                <Link to='/contact'>
+                <a href="mailto:landonlewisturner@gmail.com">
                     <ContactMailIcon style={{color: secondary}} fontSize='large' />
-                </Link>
+                </a>
             </div>
         </HeaderDiv>
     )
