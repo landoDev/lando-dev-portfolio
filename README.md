@@ -1,4 +1,6 @@
-# lando-dev-portfolio
+# My Portfolio
+
+Website that is home to the work that I have accomplished that can be publicly shared and a place to show myself off a bit. 
 
 ## Deployment
 
