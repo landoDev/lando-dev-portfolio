@@ -15,4 +15,4 @@ https://landodeveloper.now.sh/
 
 ## Contributors
 
-** [Landon Turner](https://github.com/landoDev)
+[Landon Turner](https://github.com/landoDev)
